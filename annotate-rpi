@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+set -u
+
+cd `dirname $(realpath $0)`
+
+rm -rf output-rpi
+mkdir output-rpi
+
+find ../SAM-tracker-sdcard/photos/3/*jpg | sort | xargs -P 4 -n 1 ./annotate-rpi
