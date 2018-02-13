@@ -55,4 +55,4 @@ Aperture F=%[exif:FNumber]"
 
 convert $tempname -pointsize 100 -fill white -gravity southeast -annotate +0+0 "`identify -format \"$format\" $tempname`"  output-rpi/$filename
 
-rm $tempname
+rm $tempname*
