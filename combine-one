@@ -34,7 +34,7 @@ cmd="exiftool  \
 $cmd
 
 # now seek back in syslog and find sensor data...
-most_recent_tx=$(fgrep "GNGGA,$timestamp_search" syslog -B 50 | fgrep "TX: " | tail -n 1 | cut -d\  -f7-)
+most_recent_tx=$(fgrep "GNGGA,$timestamp_search" syslog -B 50 | fgrep "TX: \$\$SAM" | fgrep -v NOFIX | tail -n 1 | cut -d\  -f7-)
 sentence_id=$(echo $most_recent_tx | cut -d, -f2)
 external_temperature=$(echo $most_recent_tx | cut -d, -f8)
 pressure=$(echo $most_recent_tx | cut -d, -f9)
