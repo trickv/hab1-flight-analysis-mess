@@ -1,0 +1,1460 @@
+systemd-+-99*[?-+-sort]
+        |       `-xargs]
+        |-26*[?---sort]
+        |-?-+-sort
+        |   `-xargs-+-bash-+-sort
+        |           |      `-xargs
+        |           `-bash
+        |-646*[?---bash]
+        |-76*[?---bash---bash]
+        |-14*[?-+-bash]
+        |       `-bash---bash]
+        |-8*[?---bash-+-sort]
+        |             `-xargs---2*[bash]]
+        |-89*[?-+-sort]
+        |       `-xargs---bash]
+        |-5*[?-+-sort---bash]
+        |      `-xargs]
+        |-?-+-sort-+-sort
+        |   |      `-xargs
+        |   `-xargs
+        |-2*[?-+-sort]
+        |      `-xargs-+-bash-+-sort]
+        |              |      `-xargs---bash]
+        |              `-bash]
+        |-?---bash-+-sort
+        |          `-xargs-+-bash---sort
+        |                  `-bash
+        |-33*[?-+-sort]
+        |       `-xargs---2*[bash]]
+        |-?---xargs-+-2*[bash]
+        |           |-bash-+-sort
+        |           |      `-xargs---bash
+        |           `-bash---bash
+        |-23*[?---3*[bash]]
+        |-?---xargs---bash-+-sort
+        |                  `-xargs---bash---bash---bash
+        |-?-+-sort
+        |   `-xargs---bash-+-bash
+        |                  `-bash-+-sort
+        |                         `-xargs-+-bash---bash---bash
+        |                                 |-bash-+-sort
+        |                                 |      `-xargs---bash
+        |                                 `-bash
+        |-3*[?-+-sort]
+        |      `-xargs-+-bash---bash]
+        |              `-3*[bash]]
+        |-15*[?-+-bash---bash]
+        |       `-bash]
+        |-3*[?-+-sort]
+        |      `-xargs---bash---bash---bash]
+        |-?-+-sort
+        |   `-xargs-+-bash---bash---bash
+        |           `-bash
+        |-8*[?-+-sort]
+        |      `-xargs---3*[bash]]
+        |-?---bash-+-sort
+        |          `-xargs-+-3*[bash]
+        |                  `-bash-+-sort
+        |                         `-xargs-+-3*[bash---bash]
+        |                                 `-bash-+-bash
+        |                                        `-bash---bash
+        |-4*[?-+-sort]
+        |      `-xargs-+-bash---bash]
+        |              `-2*[bash]]
+        |-2*[?-+-sort]
+        |      `-xargs---bash---2*[bash]]
+        |-?-+-sort
+        |   `-xargs-+-2*[bash]
+        |           `-bash---2*[bash]
+        |-5*[?-+-sort]
+        |      `-xargs---bash---bash]
+        |-102*[?---2*[bash]]
+        |-17*[?---bash-+-sort]
+        |              `-xargs---bash]
+        |-15*[?---find]
+        |-8*[?-+-sort]
+        |      `-xargs-+-bash]
+        |              `-bash---bash]
+        |-3*[?---bash---2*[bash]]
+        |-?-+-sort
+        |   `-xargs-+-bash---bash---bash
+        |           |-bash
+        |           `-bash-+-sort
+        |                  `-xargs
+        |-6*[?-+-sort]
+        |      `-xargs---bash-+-sort]
+        |                     `-xargs]
+        |-2*[?-+-sort]
+        |      `-xargs-+-2*[bash---bash---bash]]
+        |              `-bash]
+        |-?---bash-+-sort
+        |          `-xargs-+-bash---bash
+        |                  `-bash---bash---bash
+        |-?-+-sort
+        |   `-xargs-+-bash
+        |           |-bash-+-sort
+        |           |      `-xargs---bash
+        |           |-sort
+        |           `-xargs
+        |-3*[?-+-sort---bash]
+        |      `-xargs---bash]
+        |-3*[?-+-sort]
+        |      `-xargs-+-bash---bash]
+        |              `-bash]
+        |-2*[?-+-sort]
+        |      `-xargs-+-4*[bash]]
+        |              `-bash---bash]
+        |-?-+-3*[bash]
+        |   `-bash---bash---bash-+-bash-+-sort
+        |                        |      `-xargs---bash
+        |                        `-bash-+-sort
+        |                               `-xargs
+        |-?-+-sort
+        |   `-xargs-+-3*[bash]
+        |           `-bash---bash
+        |-2*[?---xargs---2*[bash]]
+        |-?-+-sort
+        |   `-xargs---bash---3*[bash]
+        |-9*[?---xargs]
+        |-?---xargs---bash---bash
+        |-?---2*[bash---bash---bash]
+        |-9*[?-+-bash]
+        |      `-bash-+-sort]
+        |             `-xargs]
+        |-?-+-sort
+        |   `-xargs-+-2*[bash]
+        |           `-bash-+-sort
+        |                  `-xargs---3*[bash]
+        |-3*[?-+-sort]
+        |      `-xargs---bash-+-sort]
+        |                     `-xargs---bash]
+        |-?-+-sort
+        |   `-xargs-+-2*[bash]
+        |           `-bash-+-sort
+        |                  `-xargs---2*[bash]
+        |-4*[?-+-sort]
+        |      `-xargs---bash-+-sort]
+        |                     `-xargs---2*[bash]]
+        |-?-+-bash---bash---bash
+        |   |-bash
+        |   `-bash---bash
+        |-4*[?-+-sort]
+        |      `-xargs---bash---sort]
+        |-?---bash-+-sort
+        |          `-xargs-+-2*[bash]
+        |                  `-bash-+-sort
+        |                         `-xargs---3*[bash]
+        |-2*[?-+-2*[bash---bash]]
+        |      `-bash]
+        |-11*[?---bash---bash---bash]
+        |-?-+-sort
+        |   `-xargs-+-2*[bash]
+        |           `-bash-+-sort
+        |                  `-xargs-+-bash-+-sort
+        |                          |      `-xargs---bash---bash-+-sort
+        |                          |                            `-xargs---bash
+        |                          `-bash
+        |-2*[?-+-sort]
+        |      `-xargs-+-bash---bash---bash]
+        |              `-2*[bash]]
+        |-2*[?-+-sort]
+        |      `-xargs-+-2*[bash---bash]]
+        |              `-bash]
+        |-?-+-sort
+        |   `-xargs-+-bash
+        |           |-bash-+-sort
+        |           |      `-xargs---bash---bash---bash
+        |           |-bash-+-sort
+        |           |      `-xargs
+        |           `-bash---bash---bash---2*[bash]
+        |-?-+-sort
+        |   `-xargs-+-bash---2*[bash]
+        |           |-bash---bash
+        |           `-bash
+        |-6*[?---bash---sort]
+        |-21*[?---bash-+-sort]
+        |              `-xargs]
+        |-?---xargs-+-2*[bash---sort]
+        |           |-bash
+        |           `-bash---bash
+        |-?-+-sort
+        |   `-xargs-+-bash---bash---bash
+        |           |-bash---bash
+        |           `-bash
+        |-5*[?-+-sort]
+        |      `-xargs-+-bash]
+        |              `-bash-+-sort]
+        |                     `-xargs---bash]
+        |-?-+-sort
+        |   `-xargs-+-bash---bash---bash
+        |           |-bash-+-sort
+        |           |      `-xargs---2*[bash]
+        |           `-bash---bash
+        |-?-+-sort
+        |   `-xargs---bash---xargs---2*[bash]
+        |-?-+-sort
+        |   `-xargs-+-bash---bash
+        |           |-bash
+        |           `-bash-+-sort
+        |                  `-xargs
+        |-?-+-sort
+        |   `-xargs-+-bash---xargs---bash
+        |           `-2*[bash]
+        |-3*[?-+-sort]
+        |      `-xargs---bash-+-sort]
+        |                     `-xargs---bash---bash]
+        |-?-+-sort
+        |   `-xargs-+-2*[bash]
+        |           `-bash-+-sort
+        |                  `-xargs---2*[bash]
+        |-3*[?-+-sort]
+        |      `-xargs-+-2*[bash]]
+        |              `-bash---bash---bash]
+        |-2*[?-+-bash---bash---2*[bash]]
+        |      `-bash]
+        |-?-+-bash-+-sort
+        |   |      `-xargs-+-bash-+-sort
+        |   |              |      `-xargs
+        |   |              |-bash
+        |   |              `-bash---bash
+        |   `-bash-+-sort
+        |          `-xargs
+        |-?-+-sort
+        |   `-xargs-+-3*[bash---bash]
+        |           `-bash
+        |-8*[?---4*[bash]]
+        |-2*[?-+-sort]
+        |      `-xargs-+-bash-+-sort]
+        |              |      `-xargs---bash]
+        |              `-bash---bash]
+        |-?-+-sort
+        |   `-xargs---bash-+-sort
+        |                  `-xargs-+-bash---bash
+        |                          `-bash
+        |-2*[?---bash---xargs---bash]
+        |-2*[?-+-2*[bash]]
+        |      `-bash-+-sort]
+        |             `-xargs]
+        |-2*[?-+-sort]
+        |      `-xargs-+-bash]
+        |              `-bash---bash---bash]
+        |-3*[?-+-bash]
+        |      `-bash---sort]
+        |-4*[?---2*[bash---bash]]
+        |-?---bash---xargs-+-bash-+-sort
+        |                  |      `-xargs
+        |                  `-bash-+-sort
+        |                         `-xargs---bash
+        |-?-+-sort
+        |   `-xargs---bash-+-sort---bash
+        |                  `-xargs-+-bash
+        |                          `-bash---bash
+        |-6*[?-+-bash]
+        |      `-bash---bash---bash]
+        |-?-+-sort---bash
+        |   `-xargs-+-bash---bash
+        |           |-bash---bash---bash
+        |           `-bash
+        |-?-+-sort
+        |   `-xargs---bash-+-sort
+        |                  `-xargs-+-bash
+        |                          `-bash-+-sort
+        |                                 `-xargs---bash
+        |-?-+-sort
+        |   `-xargs-+-bash-+-sort
+        |           |      `-xargs---bash
+        |           `-bash---bash---bash
+        |-2*[?---xargs---bash]
+        |-?-+-sort
+        |   `-xargs-+-bash-+-sort
+        |           |      `-xargs---bash-+-sort
+        |           |                     `-xargs-+-bash-+-sort
+        |           |                             |      `-xargs
+        |           |                             |-bash
+        |           |                             `-bash-+-sort
+        |           |                                    `-xargs---3*[bash]
+        |           `-bash
+        |-3*[?-+-sort]
+        |      `-xargs---4*[bash]]
+        |-?---xargs-+-bash
+        |           `-bash---bash
+        |-?-+-bash---bash
+        |   |-bash---bash---bash
+        |   `-2*[bash]
+        |-?-+-bash-+-sort
+        |   |      `-xargs---bash---xargs-+-2*[bash]
+        |   |                             `-bash---bash---bash
+        |   |-bash---bash
+        |   `-2*[bash]
+        |-?-+-sort
+        |   `-xargs-+-bash-+-sort
+        |           |      `-xargs---bash
+        |           `-2*[bash]
+        |-?-+-sort
+        |   `-xargs-+-3*[bash]
+        |           `-bash-+-sort
+        |                  `-xargs---bash---bash
+        |-?-+-sort
+        |   `-xargs---bash-+-sort
+        |                  `-xargs-+-bash---bash
+        |                          `-2*[bash]
+        |-?-+-sort
+        |   `-xargs---2*[bash---bash---bash]
+        |-?-+-sort
+        |   `-xargs---bash-+-bash-+-sort
+        |                  |      `-xargs---2*[bash]
+        |                  `-bash
+        |-?-+-sort
+        |   `-xargs-+-bash
+        |           `-bash---xargs---bash---bash
+        |-?-+-sort-+-bash
+        |   |      `-bash---bash---bash
+        |   `-xargs---4*[bash]
+        |-4*[?-+-2*[bash---bash]]
+        |      `-bash]
+        |-?---bash-+-sort
+        |          `-xargs---bash---bash
+        |-4*[?-+-2*[bash]]
+        |      `-bash---bash]
+        |-?-+-sort
+        |   `-xargs-+-bash---bash
+        |           |-bash---bash---bash
+        |           `-bash
+        |-?-+-bash
+        |   `-bash---xargs---bash
+        |-?-+-bash---bash---bash
+        |   `-2*[bash]
+        |-?-+-sort
+        |   `-xargs---bash-+-bash---bash
+        |                  |-bash---xargs---bash
+        |                  `-bash
+        |-5*[?-+-bash-+-sort]
+        |      |      `-xargs]
+        |      `-bash]
+        |-?-+-sort
+        |   `-xargs-+-bash
+        |           `-bash-+-sort
+        |                  `-xargs---bash---bash
+        |-?-+-sort
+        |   `-xargs-+-bash
+        |           |-bash---bash---bash
+        |           `-bash-+-sort
+        |                  `-xargs---bash
+        |-?-+-sort
+        |   `-xargs-+-bash-+-sort
+        |           |      `-xargs-+-3*[bash]
+        |           |              `-bash---bash
+        |           |-bash-+-sort
+        |           |      `-xargs---bash
+        |           `-bash
+        |-?---xargs---bash-+-sort
+        |                  `-xargs-+-2*[bash---bash]
+        |                          `-bash---bash---bash
+        |-?-+-2*[bash]
+        |   `-bash-+-sort
+        |          `-xargs-+-2*[bash]
+        |                  `-bash-+-sort
+        |                         `-xargs---bash
+        |-?-+-3*[bash]
+        |   `-bash---bash---bash
+        |-?-+-bash-+-sort
+        |   |      `-xargs-+-2*[bash]
+        |   |              `-bash-+-sort
+        |   |                     `-xargs-+-2*[bash]
+        |   |                             `-bash---bash
+        |   `-bash
+        |-?-+-bash-+-sort
+        |   |      `-xargs---bash
+        |   `-bash-+-sort
+        |          `-xargs
+        |-?-+-sort
+        |   `-xargs-+-bash---bash---2*[bash]
+        |           `-3*[bash]
+        |-3*[?-+-bash---bash---bash]
+        |      `-bash]
+        |-?-+-sort---bash
+        |   `-xargs-+-3*[bash]
+        |           `-bash---bash
+        |-?---bash-+-sort
+        |          `-xargs-+-bash-+-sort
+        |                  |      `-xargs---bash-+-sort
+        |                  |                     `-xargs-+-bash---bash
+        |                  |                             `-bash
+        |                  `-bash---bash---bash
+        |-2*[?-+-2*[bash]]
+        |      `-bash---bash---bash]
+        |-?-+-sort
+        |   `-xargs-+-bash---bash---bash
+        |           |-bash---bash
+        |           `-2*[bash]
+        |-?-+-sort
+        |   `-xargs-+-bash-+-sort
+        |           |      `-xargs-+-bash
+        |           |              `-bash-+-sort---sort
+        |           |                     `-xargs---bash
+        |           `-bash
+        |-?-+-sort---2*[bash---bash]
+        |   `-xargs---bash
+        |-?-+-sort
+        |   `-xargs-+-bash
+        |           `-bash-+-sort
+        |                  `-xargs
+        |-?---xargs-+-4*[bash]
+        |           `-bash---bash
+        |-?---xargs-+-bash-+-sort
+        |           |      `-xargs---bash-+-sort
+        |           |                     `-xargs
+        |           `-bash-+-bash
+        |                  `-bash---bash
+        |-?-+-bash
+        |   `-bash-+-sort
+        |          `-xargs-+-2*[bash---bash]
+        |                  |-bash---xargs
+        |                  `-bash---bash---bash---bash---bash
+        |-2*[?-+-bash---bash]
+        |      `-2*[bash]]
+        |-?-+-4*[bash]
+        |   `-bash---bash
+        |-9*[?-+-bash]
+        |      `-bash-+-sort]
+        |             `-xargs---bash]
+        |-?-+-sort
+        |   `-xargs-+-bash---bash---2*[bash]
+        |           `-bash
+        |-?-+-3*[bash]
+        |   `-bash-+-sort
+        |          `-xargs---bash
+        |-?-+-sort
+        |   `-xargs-+-bash---sort
+        |           `-bash
+        |-?---bash-+-sort---bash
+        |          `-xargs
+        |-?-+-sort
+        |   `-xargs-+-bash-+-bash---bash---bash---sort
+        |           |      `-bash---bash
+        |           `-bash
+        |-?-+-sort
+        |   `-xargs---2*[bash---bash]
+        |-?-+-2*[bash]
+        |   `-bash---xargs---bash---bash---bash
+        |-?-+-2*[bash]
+        |   |-bash---bash
+        |   `-bash---xargs-+-2*[bash]
+        |                  `-bash---bash
+        |-?-+-bash---bash
+        |   |-3*[bash]
+        |   `-bash-+-sort
+        |          `-xargs---bash
+        |-?-+-bash-+-sort
+        |   |      `-xargs---bash
+        |   `-3*[bash]
+        |-?---bash---xargs---2*[bash]
+        |-?-+-2*[bash]
+        |   `-bash---bash---bash
+        |-?-+-bash
+        |   `-2*[bash---bash]
+        |-?-+-bash---bash---bash
+        |   `-bash---bash
+        |-?-+-bash-+-bash
+        |   |      `-bash---bash
+        |   `-2*[bash]
+        |-?-+-2*[bash---bash---bash]
+        |   `-2*[bash]
+        |-2*[?-+-3*[bash]]
+        |      `-bash---bash]
+        |-?-+-sort
+        |   `-xargs-+-bash-+-sort
+        |           |      `-xargs-+-bash---bash---bash
+        |           |              `-bash-+-sort
+        |           |                     `-xargs---3*[bash]
+        |           |-bash
+        |           `-bash---bash---bash
+        |-?-+-bash-+-sort
+        |   |      `-xargs
+        |   |-bash-+-bash-+-sort
+        |   |      |      `-xargs
+        |   |      `-bash
+        |   `-bash---bash---bash
+        |-?---bash-+-sort---2*[bash]
+        |          `-xargs---2*[bash]
+        |-?-+-sort
+        |   `-xargs---5*[bash]
+        |-?-+-bash---sort
+        |   `-bash
+        |-?---xargs-+-3*[bash]
+        |           `-bash---bash
+        |-?-+-bash---bash---bash---bash---xargs---bash
+        |   `-bash
+        |-?---xargs-+-bash-+-sort
+        |           |      `-xargs---bash
+        |           `-bash-+-sort
+        |                  `-xargs---bash---bash
+        |-2*[?---bash-+-bash]
+        |             |-sort]
+        |             `-xargs---bash]
+        |-?-+-bash-+-sort
+        |   |      `-xargs---2*[bash]
+        |   `-bash-+-sort
+        |          `-xargs
+        |-?-+-bash-+-sort
+        |   |      `-xargs---2*[bash]
+        |   `-bash---xargs---bash
+        |-?-+-2*[bash]
+        |   `-bash---bash
+        |-?---bash---xargs-+-bash-+-sort
+        |                  |      `-xargs-+-bash
+        |                  |              `-2*[bash---bash]
+        |                  |-bash---find
+        |                  `-bash-+-sort
+        |                         `-xargs---bash
+        |-?-+-bash
+        |   `-bash---2*[bash]
+        |-?-+-bash-+-sort
+        |   |      `-xargs
+        |   `-bash---bash
+        |-?---bash-+-sort---3*[bash]
+        |          `-xargs---bash
+        |-?-+-sort
+        |   `-xargs-+-bash-+-sort
+        |           |      `-xargs---bash
+        |           `-bash---bash-+-sort
+        |                         `-xargs
+        |-?-+-bash-+-sort
+        |   |      `-xargs-+-bash---bash---bash
+        |   |              `-bash
+        |   |-bash
+        |   |-bash---bash---bash
+        |   `-bash-+-sort
+        |          `-xargs---2*[bash]
+        |-?-+-sort
+        |   `-xargs-+-bash---bash
+        |           `-bash-+-sort
+        |                  `-xargs
+        |-?-+-bash-+-sort
+        |   |      `-xargs---bash---bash---bash
+        |   `-bash
+        |-?-+-bash-+-sort
+        |   |      `-xargs---bash
+        |   |-4*[bash]
+        |   `-bash---bash---bash
+        |-?-+-sort
+        |   `-xargs-+-2*[bash]
+        |           |-bash-+-sort
+        |           |      `-xargs-+-bash
+        |           |              `-bash---bash
+        |           `-bash-+-sort
+        |                  `-xargs
+        |-?-+-bash
+        |   |-bash-+-sort
+        |   |      `-xargs---bash
+        |   `-bash-+-sort
+        |          `-xargs-+-3*[bash]
+        |                  `-bash---bash
+        |-?-+-bash---bash---bash
+        |   `-3*[bash]
+        |-?-+-2*[bash]
+        |   `-bash---sort
+        |-?---bash-+-sort---sort
+        |          `-xargs
+        |-?---bash---xargs---bash-+-sort
+        |                         `-xargs---bash
+        |-3*[?-+-3*[bash]]
+        |      `-bash---bash]
+        |-4*[?---bash-+-sort]
+        |             `-xargs---bash-+-sort]
+        |                            `-xargs]
+        |-?-+-bash---bash
+        |   |-bash
+        |   `-bash-+-sort
+        |          `-xargs
+        |-?-+-bash---bash-+-sort
+        |   |             `-xargs-+-bash
+        |   |                     |-bash-+-sort
+        |   |                     |      `-xargs
+        |   |                     `-bash-+-sort
+        |   |                            `-xargs---bash
+        |   `-bash---bash
+        |-?---xargs---3*[bash]
+        |-?-+-bash
+        |   `-2*[bash-+-sort]
+        |             `-xargs---bash]
+        |-?-+-2*[bash]
+        |   `-bash---find
+        |-?-+-bash---bash
+        |   `-3*[bash]
+        |-?-+-find
+        |   |-sort
+        |   `-xargs---2*[bash]
+        |-?-+-bash-+-bash-+-sort
+        |   |      |      `-xargs---bash
+        |   |      `-bash
+        |   `-bash
+        |-?-+-bash-+-bash
+        |   |      |-sort---bash-+-sort
+        |   |      |             `-xargs
+        |   |      `-xargs---bash---bash
+        |   `-bash-+-sort
+        |          `-xargs-+-bash---bash---bash
+        |                  `-bash
+        |-?-+-bash-+-sort
+        |   |      `-xargs---bash
+        |   `-bash-+-sort
+        |          `-xargs---2*[bash]
+        |-?---bash---bash---find
+        |-?-+-find
+        |   `-xargs
+        |-?-+-2*[bash]
+        |   |-bash---bash
+        |   `-bash-+-2*[bash]
+        |          `-bash-+-sort
+        |                 `-xargs---bash-+-sort
+        |                                `-xargs
+        |-3*[?-+-bash-+-sort]
+        |      |      `-xargs]
+        |      `-2*[bash]]
+        |-?-+-bash
+        |   `-sort
+        |-2*[?-+-bash---sort]
+        |      `-bash---bash]
+        |-?-+-6*[bash]
+        |   `-bash---bash
+        |-4*[?-+-bash]
+        |      |-sort]
+        |      `-xargs---bash]
+        |-?-+-4*[bash]
+        |   `-bash-+-sort
+        |          `-xargs
+        |-?-+-2*[bash]
+        |   |-bash-+-sort
+        |   |      `-xargs
+        |   `-bash---bash
+        |-?-+-bash-+-sort
+        |   |      `-xargs---4*[bash]
+        |   |-bash---bash
+        |   `-bash
+        |-?-+-bash---xargs
+        |   `-bash
+        |-?-+-bash---2*[bash]
+        |   `-bash
+        |-?-+-bash
+        |   |-sort
+        |   `-xargs---bash---bash---bash
+        |-?-+-sort
+        |   `-xargs-+-3*[bash]
+        |           `-bash---bash---bash
+        |-?-+-bash-+-sort
+        |   |      `-xargs-+-bash
+        |   |              `-bash-+-sort
+        |   |                     `-xargs
+        |   `-bash
+        |-?-+-4*[bash]
+        |   `-bash---xargs-+-bash---bash
+        |                  `-bash
+        |-?-+-bash
+        |   `-bash-+-sort
+        |          `-xargs---bash-+-bash
+        |                         `-bash---bash
+        |-?-+-sort
+        |   `-xargs---bash-+-sort
+        |                  `-xargs-+-2*[bash]
+        |                          `-bash-+-sort
+        |                                 `-xargs---bash---bash---bash
+        |-?---bash---bash-+-sort
+        |                 `-xargs
+        |-?-+-4*[bash]
+        |   `-bash-+-sort
+        |          `-xargs-+-2*[bash]
+        |                  `-bash---bash
+        |-?-+-bash-+-sort
+        |   |      `-xargs---bash
+        |   `-bash---bash
+        |-?-+-bash
+        |   |-bash---sort
+        |   |-bash---bash
+        |   `-bash-+-sort
+        |          `-xargs-+-bash-+-bash
+        |                  |      |-sort
+        |                  |      `-xargs
+        |                  `-2*[bash]
+        |-2*[?-+-bash-+-sort]
+        |      |      `-xargs---2*[bash]]
+        |      `-bash]
+        |-?-+-find
+        |   |-sort
+        |   `-xargs
+        |-2*[?-+-3*[bash]]
+        |      `-bash---bash]
+        |-?-+-bash
+        |   |-sort
+        |   `-xargs---2*[bash]
+        |-?-+-find
+        |   `-sort
+        |-?-+-bash
+        |   |-sort
+        |   `-xargs-+-bash-+-sort
+        |           |      `-xargs---2*[bash]
+        |           `-2*[bash]
+        |-?---bash-+-sort
+        |          `-xargs-+-2*[bash]
+        |                  `-bash---bash
+        |-?---bash-+-2*[bash]
+        |          `-bash---bash
+        |-?-+-3*[bash]
+        |   `-bash-+-sort
+        |          `-xargs-+-bash---bash
+        |                  `-bash
+        |-?-+-bash
+        |   |-bash---bash
+        |   `-bash-+-sort
+        |          `-xargs---bash
+        |-?-+-bash-+-sort
+        |   |      `-xargs-+-bash-+-sort
+        |   |              |      `-xargs---bash
+        |   |              |-2*[bash]
+        |   |              `-bash-+-sort
+        |   |                     `-xargs
+        |   `-bash-+-bash
+        |          `-bash---bash---bash
+        |-2*[?-+-bash]
+        |      |-sort]
+        |      `-xargs]
+        |-?-+-bash---bash
+        |   |-bash-+-sort
+        |   |      `-xargs---bash
+        |   `-2*[bash]
+        |-?-+-4*[bash]
+        |   `-bash-+-sort
+        |          `-xargs---2*[bash]
+        |-?-+-bash---bash-+-sort
+        |   |             `-xargs
+        |   `-bash
+        |-?---bash-+-sort
+        |          `-xargs-+-bash-+-sort
+        |                  |      `-xargs---3*[bash]
+        |                  `-2*[bash]
+        |-?---bash-+-sort
+        |          `-xargs---bash-+-sort
+        |                         `-xargs-+-bash-+-sort
+        |                                 |      `-xargs-+-bash
+        |                                 |              `-bash---bash-+-sort
+        |                                 |                            `-xargs---bash
+        |                                 `-bash
+        |-?-+-bash-+-sort
+        |   |      `-xargs---bash
+        |   `-2*[bash]
+        |-?-+-4*[bash]
+        |   `-bash-+-sort
+        |          `-xargs---3*[bash]
+        |-?-+-bash-+-sort
+        |   |      `-xargs
+        |   |-bash-+-sort
+        |   |      `-xargs---2*[bash]
+        |   `-2*[bash]
+        |-?---bash-+-sort
+        |          `-xargs-+-bash---bash---bash
+        |                  `-bash
+        |-?-+-bash-+-sort
+        |   |      `-xargs-+-bash-+-sort
+        |   |              |      `-xargs-+-2*[bash]
+        |   |              |              `-bash---bash
+        |   |              `-2*[bash]
+        |   `-bash
+        |-?-+-2*[bash]
+        |   `-bash-+-sort
+        |          `-xargs-+-bash-+-sort
+        |                  |      `-xargs
+        |                  |-bash-+-sort
+        |                  |      `-xargs---2*[bash]
+        |                  `-bash
+        |-?---2*[bash-+-sort]
+        |             `-xargs]
+        |-?-+-bash
+        |   |-bash-+-sort
+        |   |      `-xargs---bash
+        |   `-bash---bash---bash
+        |-?---bash-+-sort
+        |          `-xargs---bash---xargs
+        |-?---bash-+-sort
+        |          `-xargs---3*[bash]
+        |-?-+-2*[bash]
+        |   `-bash---2*[bash]
+        |-?---bash-+-sort
+        |          `-xargs-+-bash
+        |                  `-bash---bash---bash
+        |-?-+-2*[bash]
+        |   `-bash---xargs
+        |-?-+-2*[bash]
+        |   `-bash-+-sort
+        |          `-xargs---2*[bash]
+        |-?---bash-+-sort
+        |          `-xargs---bash-+-sort
+        |                         `-xargs---bash
+        |-?-+-bash
+        |   `-bash-+-sort
+        |          `-xargs---bash-+-sort
+        |                         `-xargs---bash
+        |-?-+-bash-+-sort
+        |   |      `-xargs---bash
+        |   `-bash
+        |-?---bash-+-sort
+        |          `-xargs-+-bash
+        |                  `-bash-+-sort
+        |                         `-xargs---bash-+-sort
+        |                                        `-xargs-+-bash
+        |                                                `-bash---bash
+        |-?---bash-+-bash
+        |          |-sort
+        |          `-xargs
+        |-?-+-bash---bash-+-sort
+        |   |             `-xargs---bash
+        |   `-2*[bash]
+        |-?---bash-+-sort
+        |          `-xargs-+-bash-+-sort
+        |                  |      `-xargs---2*[bash]
+        |                  |-3*[bash]
+        |                  `-bash---bash
+        |-?-+-bash
+        |   `-bash-+-sort
+        |          `-xargs-+-bash-+-sort
+        |                  |      `-xargs---bash-+-sort
+        |                  |                     `-xargs---bash-+-sort
+        |                  |                                    `-xargs---bash
+        |                  `-2*[bash]
+        |-?---bash---2*[bash---bash]
+        |-?-+-bash---xargs
+        |   `-xargs-+-sort
+        |           `-xargs---bash-+-sort
+        |                          `-xargs---bash
+        |-?-+-bash
+        |   |-bash---xargs-+-bash-+-sort
+        |   |              |      `-xargs
+        |   |              `-bash
+        |   `-bash---xargs---bash
+        |-?---sort-+-bash
+        |          `-bash-+-sort
+        |                 `-xargs---2*[bash]
+        |-?-+-2*[bash]
+        |   `-bash---xargs---3*[bash]
+        |-?-+-bash---bash
+        |   |-2*[bash]
+        |   `-bash-+-sort
+        |          `-xargs
+        |-?---bash-+-sort
+        |          `-xargs-+-bash
+        |                  `-bash-+-sort
+        |                         `-xargs
+        |-?-+-bash---bash
+        |   `-bash-+-sort
+        |          `-xargs---2*[bash]
+        |-?-+-bash-+-bash---bash
+        |   |      |-sort
+        |   |      `-xargs---bash
+        |   `-bash
+        |-ModemManager---2*[{ModemManager}]
+        |-NetworkManager---2*[{NetworkManager}]
+        |-accounts-daemon---2*[{accounts-daemon}]
+        |-acpid
+        |-agetty
+        |-atd
+        |-avahi-daemon---avahi-daemon
+        |-avahi-dnsconfd
+        |-bash---oosplash-+-soffice.bin---4*[{soffice.bin}]
+        |                 `-2*[{oosplash}]
+        |-bluetoothd
+        |-colord---2*[{colord}]
+        |-cron
+        |-cups-browsed---2*[{cups-browsed}]
+        |-cupsd
+        |-dbus-daemon
+        |-dnsmasq---dnsmasq
+        |-htcacheclean
+        |-ibus-daemon-+-ibus-dconf---3*[{ibus-dconf}]
+        |             |-ibus-engine-sim---2*[{ibus-engine-sim}]
+        |             |-ibus-ui-gtk3---3*[{ibus-ui-gtk3}]
+        |             `-2*[{ibus-daemon}]
+        |-ibus-x11---2*[{ibus-x11}]
+        |-irqbalance
+        |-kerneloops
+        |-lightdm-+-Xorg---{Xorg}
+        |         |-lightdm-+-i3---ssh-agent
+        |         |         `-2*[{lightdm}]
+        |         `-2*[{lightdm}]
+        |-lvmetad
+        |-omiserver
+        |-polkitd---2*[{polkitd}]
+        |-pulseaudio---3*[{pulseaudio}]
+        |-rpc.gssd
+        |-rpcbind
+        |-rsyslogd---3*[{rsyslogd}]
+        |-rtkit-daemon---2*[{rtkit-daemon}]
+        |-sh---nm-applet---3*[{nm-applet}]
+        |-sh---bash---syndaemon
+        |-sh---applet.py---{applet.py}
+        |-sh---i3bar---sh-+-i3status---{i3status}
+        |                 `-python
+        |-smartd
+        |-snapd---7*[{snapd}]
+        |-sshd
+        |-systemd-+-(sd-pam)
+        |         |-at-spi-bus-laun-+-dbus-daemon
+        |         |                 `-3*[{at-spi-bus-laun}]
+        |         |-at-spi2-registr---2*[{at-spi2-registr}]
+        |         |-888*[bash]
+        |         |-23*[bash-+-sort]
+        |         |          `-xargs---bash-+-sort]
+        |         |                         `-xargs]
+        |         |-21*[bash---bash]
+        |         |-bash-+-bash---bash---bash
+        |         |      `-bash
+        |         |-78*[bash-+-sort]
+        |         |          `-xargs---bash]
+        |         |-15*[bash-+-sort]
+        |         |          `-xargs---3*[bash]]
+        |         |-bash-+-sort
+        |         |      `-xargs---bash-+-sort
+        |         |                     `-xargs-+-bash---xargs-+-2*[bash]
+        |         |                             |              `-bash---bash---bash
+        |         |                             `-bash
+        |         |-2*[bash-+-bash]
+        |         |         |-sort]
+        |         |         `-xargs---bash]
+        |         |-2*[bash---xargs---3*[bash]]
+        |         |-82*[bash-+-sort]
+        |         |          `-xargs]
+        |         |-bash-+-bash
+        |         |      |-sort
+        |         |      `-xargs---2*[bash]
+        |         |-7*[bash-+-sort]
+        |         |         `-xargs-+-bash]
+        |         |                 `-bash-+-sort]
+        |         |                        `-xargs---bash]
+        |         |-30*[bash-+-sort]
+        |         |          `-xargs---2*[bash]]
+        |         |-8*[bash-+-sort]
+        |         |         `-xargs---bash-+-sort]
+        |         |                        `-xargs---2*[bash]]
+        |         |-6*[bash---bash---bash]
+        |         |-3*[bash---xargs]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs
+        |         |              `-bash---sort
+        |         |-bash-+-bash
+        |         |      |-sort
+        |         |      `-xargs---3*[bash]
+        |         |-14*[bash---xargs---bash]
+        |         |-bash-+-sort
+        |         |      `-xargs---bash-+-sort
+        |         |                     `-xargs-+-2*[bash]
+        |         |                             `-bash-+-sort
+        |         |                                    `-xargs---2*[bash]
+        |         |-10*[bash-+-sort]
+        |         |          `-xargs---bash-+-sort]
+        |         |                         `-xargs---bash]
+        |         |-4*[bash-+-sort]
+        |         |         `-xargs---bash-+-sort]
+        |         |                        `-xargs---bash-+-sort]
+        |         |                                       `-xargs]
+        |         |-bash---xargs---bash---bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-2*[bash]
+        |         |              `-2*[bash-+-sort]
+        |         |                        `-xargs---bash]
+        |         |-15*[bash---sort]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-2*[bash]
+        |         |              `-2*[bash---bash---bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-2*[bash]
+        |         |              |-bash-+-sort
+        |         |              |      `-xargs
+        |         |              `-bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-2*[bash]
+        |         |              `-bash-+-sort
+        |         |                     `-xargs---bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs---bash---xargs-+-bash---xargs---bash
+        |         |                             |-bash-+-sort
+        |         |                             |      `-xargs-+-bash---bash
+        |         |                             |              |-bash---sort
+        |         |                             |              `-bash
+        |         |                             `-bash-+-sort
+        |         |                                    `-xargs
+        |         |-bash-+-bash-+-sort
+        |         |      |      `-xargs---bash---bash
+        |         |      `-bash-+-bash
+        |         |             `-find
+        |         |-2*[bash-+-sort]
+        |         |         `-xargs---4*[bash]]
+        |         |-bash-+-sort
+        |         |      `-xargs---2*[bash-+-sort]
+        |         |                        `-xargs]
+        |         |-2*[bash---xargs---2*[bash]]
+        |         |-3*[bash-+-sort]
+        |         |         `-xargs-+-2*[bash]]
+        |         |                 `-bash---bash]
+        |         |-2*[bash-+-sort]
+        |         |         `-xargs-+-bash]
+        |         |                 `-bash-+-sort]
+        |         |                        `-xargs---2*[bash]]
+        |         |-bash---bash-+-sort
+        |         |             `-xargs---bash
+        |         |-3*[bash---xargs---bash-+-sort]
+        |         |                        `-xargs]
+        |         |-bash-+-bash
+        |         |      `-bash-+-sort
+        |         |             `-xargs-+-bash
+        |         |                     `-bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-2*[bash]
+        |         |              `-bash-+-sort
+        |         |                     `-xargs---bash
+        |         |-bash-+-sort
+        |         |      `-xargs---bash---find-+-bash
+        |         |                            `-bash---bash
+        |         |-bash---find
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs---2*[bash]
+        |         |              `-3*[bash]
+        |         |-bash-+-bash
+        |         |      `-bash---bash
+        |         |-bash-+-bash---bash
+        |         |      `-6*[bash]
+        |         |-bash-+-sort
+        |         |      `-xargs---bash-+-sort
+        |         |                     `-xargs-+-2*[bash---bash]
+        |         |                             `-bash
+        |         |-3*[bash-+-sort]
+        |         |         `-xargs-+-bash]
+        |         |                 `-bash---bash]
+        |         |-2*[bash-+-sort]
+        |         |         `-xargs---bash---sort]
+        |         |-bash-+-sort
+        |         |      `-xargs---bash-+-sort
+        |         |                     `-xargs---bash---bash
+        |         |-2*[bash-+-sort]
+        |         |         `-xargs---bash-+-sort]
+        |         |                        `-xargs---3*[bash]]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs---bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs
+        |         |-bash-+-bash
+        |         |      `-xargs
+        |         |-5*[bash-+-sort]
+        |         |         `-xargs-+-bash]
+        |         |                 `-bash-+-sort]
+        |         |                        `-xargs]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs---bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs---bash-+-sort
+        |         |                                    `-xargs---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs-+-bash
+        |         |                             `-bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash
+        |         |              |-bash-+-sort
+        |         |              |      `-xargs---2*[bash]
+        |         |              `-bash-+-sort
+        |         |                     `-xargs---bash-+-sort
+        |         |                                    `-xargs
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash
+        |         |              |-bash-+-sort
+        |         |              |      `-xargs
+        |         |              |-bash-+-sort
+        |         |              |      `-xargs---4*[bash]
+        |         |              `-bash-+-sort
+        |         |                     `-xargs---bash-+-sort
+        |         |                                    `-xargs---2*[bash]
+        |         |-bash---bash---bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs-+-bash-+-sort
+        |         |              |              |      `-xargs---bash-+-sort
+        |         |              |              |                     `-xargs---2*[bash]
+        |         |              |              `-bash
+        |         |              `-2*[bash]
+        |         |-9*[bash-+-sort]
+        |         |         `-xargs---bash---bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-4*[bash]
+        |         |              `-bash---2*[bash]
+        |         |-bash-+-sort
+        |         |      `-xargs---bash---bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-2*[bash]
+        |         |              |-bash---bash
+        |         |              `-bash-+-2*[bash]
+        |         |                     |-sort
+        |         |                     `-xargs---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash
+        |         |              |-bash-+-bash---bash
+        |         |              |      `-bash---xargs
+        |         |              `-bash---xargs-+-3*[bash]
+        |         |                             `-bash-+-sort
+        |         |                                    `-xargs
+        |         |-2*[bash-+-sort]
+        |         |         `-xargs-+-bash---bash]
+        |         |                 `-2*[bash]]
+        |         |-3*[bash-+-sort]
+        |         |         `-xargs-+-3*[bash]]
+        |         |                 `-bash---bash]
+        |         |-bash-+-find
+        |         |      `-xargs---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs---bash---bash
+        |         |              |-bash---bash
+        |         |              |-bash-+-sort
+        |         |              |      `-xargs---2*[bash]
+        |         |              `-3*[bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs-+-bash-+-sort
+        |         |              |              |      `-xargs---bash
+        |         |              |              `-2*[bash]
+        |         |              `-bash-+-sort
+        |         |                     `-xargs
+        |         |-bash---bash-+-sort
+        |         |             `-xargs
+        |         |-bash-+-sort
+        |         |      `-xargs---5*[bash]
+        |         |-2*[bash-+-sort]
+        |         |         `-xargs-+-bash-+-sort]
+        |         |                 |      `-xargs---bash]
+        |         |                 `-2*[bash]]
+        |         |-2*[bash-+-sort]
+        |         |         `-xargs-+-bash-+-sort]
+        |         |                 |      `-xargs]
+        |         |                 `-bash]
+        |         |-2*[bash-+-sort]
+        |         |         `-xargs-+-2*[bash]]
+        |         |                 `-bash---bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs-+-2*[bash]
+        |         |              |              `-bash---bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-bash
+        |         |              |      |-bash---bash
+        |         |              |      `-bash-+-sort
+        |         |              |             `-xargs---bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs---2*[bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs---bash
+        |         |              `-bash
+        |         |-bash-+-sort
+        |         |      `-xargs---bash-+-sort
+        |         |                     `-xargs-+-bash-+-sort
+        |         |                             |      `-xargs
+        |         |                             `-bash
+        |         |-2*[bash-+-sort]
+        |         |         `-xargs-+-bash-+-sort]
+        |         |                 |      `-xargs---2*[bash]]
+        |         |                 `-bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash---bash---bash
+        |         |              `-3*[bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-4*[bash]
+        |         |              `-bash-+-sort
+        |         |                     `-xargs---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs---3*[bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-4*[bash]
+        |         |              `-2*[bash---bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash---xargs---bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs---bash-+-sort
+        |         |                                    `-xargs
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash
+        |         |              `-2*[bash---bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash
+        |         |              `-bash---xargs-+-bash---bash
+        |         |                             `-bash
+        |         |-2*[bash---xargs---bash-+-sort]
+        |         |                        `-xargs---bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash---bash---bash
+        |         |              `-bash
+        |         |-bash-+-sort
+        |         |      `-xargs---bash-+-sort
+        |         |                     `-xargs-+-bash-+-sort
+        |         |                             |      `-xargs---bash
+        |         |                             `-bash-+-bash
+        |         |                                    `-bash-+-2*[bash]
+        |         |                                           `-bash-+-sort
+        |         |                                                  `-xargs-+-bash
+        |         |                                                          `-bash-+-sort
+        |         |                                                                 `-xargs---2*[bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash
+        |         |              `-bash---bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs---bash---xargs---bash
+        |         |-4*[bash-+-sort]
+        |         |         `-xargs-+-bash---bash]
+        |         |                 `-bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs-+-bash-+-sort
+        |         |              |              |      `-xargs---2*[bash]
+        |         |              |              |-bash
+        |         |              |              |-bash-+-sort---bash
+        |         |              |              |      `-xargs
+        |         |              |              `-bash---bash---bash
+        |         |              `-bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-bash
+        |         |              |      |-sort
+        |         |              |      `-xargs-+-bash
+        |         |              |              `-bash---bash
+        |         |              `-2*[bash]
+        |         |-2*[bash-+-sort]
+        |         |         `-xargs-+-bash-+-sort]
+        |         |                 |      `-xargs]
+        |         |                 `-2*[bash]]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash---xargs
+        |         |              `-bash---xargs---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash---xargs---3*[bash]
+        |         |              `-bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-4*[bash]
+        |         |              |-bash---bash---bash
+        |         |              `-bash-+-bash---sort
+        |         |                     `-bash
+        |         |-bash-+-bash
+        |         |      |-sort
+        |         |      `-xargs
+        |         |-2*[bash---xargs-+-bash---bash]
+        |         |                 `-bash]
+        |         |-bash-+-sort
+        |         |      `-xargs---bash---bash-+-sort
+        |         |                            `-xargs
+        |         |-bash-+-sort
+        |         |      `-xargs-+-2*[bash]
+        |         |              |-bash-+-sort
+        |         |              |      `-xargs---bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs---2*[bash]
+        |         |-bash-+-sort---bash
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs
+        |         |              `-bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs---bash-+-sort
+        |         |                     `-xargs-+-bash---bash
+        |         |                             `-2*[bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs---2*[bash]
+        |         |              `-bash-+-sort
+        |         |                     `-xargs---3*[bash]
+        |         |-bash---xargs-+-4*[bash]
+        |         |              |-bash-+-sort
+        |         |              |      `-xargs
+        |         |              `-bash---bash
+        |         |-2*[bash-+-sort]
+        |         |         `-xargs---2*[bash-+-sort]]
+        |         |                           `-xargs---bash]]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs
+        |         |              `-3*[bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-3*[bash]
+        |         |              `-bash---bash
+        |         |-bash-+-sort---bash
+        |         |      `-xargs
+        |         |-bash-+-sort
+        |         |      `-xargs---bash---xargs
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs-+-bash
+        |         |                             `-bash---bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash---bash---bash
+        |         |              |-bash---bash
+        |         |              `-bash
+        |         |-bash-+-bash
+        |         |      |-sort
+        |         |      `-xargs-+-2*[bash---bash]
+        |         |              `-3*[bash]
+        |         |-bash---xargs---bash-+-sort
+        |         |                     `-xargs---2*[bash]
+        |         |-bash---xargs-+-2*[bash]
+        |         |              `-bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-2*[bash]
+        |         |              `-2*[bash---bash]
+        |         |-bash---xargs-+-2*[bash]
+        |         |              `-bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs---bash-+-sort
+        |         |              |                     `-xargs---bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs---bash
+        |         |-bash---xargs-+-bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs-+-bash---bash---bash
+        |         |                             `-2*[bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs-+-bash
+        |         |                             `-bash---find
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs
+        |         |              |-bash---2*[bash]
+        |         |              `-bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-4*[bash]
+        |         |              `-bash-+-sort
+        |         |                     `-xargs
+        |         |-bash-+-sort
+        |         |      `-xargs-+-2*[bash]
+        |         |              `-bash---bash---bash
+        |         |-bash---xargs---4*[bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash---bash---bash
+        |         |              |-bash-+-sort
+        |         |              |      `-xargs-+-bash-+-sort
+        |         |              |              |      `-xargs---2*[bash]
+        |         |              |              `-2*[bash]
+        |         |              |-bash-+-sort
+        |         |              |      `-xargs-+-bash---sort
+        |         |              |              `-bash-+-sort
+        |         |              |                     `-xargs-+-bash---bash
+        |         |              |                             `-bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs-+-3*[bash]
+        |         |                             `-bash-+-sort
+        |         |                                    `-xargs---2*[bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort---bash
+        |         |              |      `-xargs---2*[bash]
+        |         |              `-bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs---bash---bash
+        |         |              |-bash-+-sort
+        |         |              |      `-xargs-+-2*[bash]
+        |         |              |              `-bash---bash
+        |         |              `-bash
+        |         |-bash---xargs---bash-+-sort
+        |         |                     `-xargs-+-2*[bash---bash]
+        |         |                             `-bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs
+        |         |              `-bash-+-sort
+        |         |                     `-xargs---bash
+        |         |-bash-+-sort
+        |         |      `-xargs---bash-+-sort
+        |         |                     `-xargs-+-bash---bash---2*[bash]
+        |         |                             `-bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash
+        |         |              `-bash-+-sort
+        |         |                     `-xargs-+-bash
+        |         |                             `-bash-+-sort
+        |         |                                    `-xargs---bash---bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-3*[bash]
+        |         |              `-bash---bash
+        |         |-bash-+-sort
+        |         |      `-xargs---bash-+-sort
+        |         |                     `-xargs---bash-+-sort
+        |         |                                    `-xargs---bash
+        |         |-bash-+-bash
+        |         |      `-xargs---bash-+-sort
+        |         |                     `-xargs
+        |         |-bash-+-sort
+        |         |      `-xargs-+-2*[bash]
+        |         |              `-bash-+-sort
+        |         |                     `-xargs
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash---xargs-+-bash
+        |         |              |              `-bash-+-sort
+        |         |              |                     `-xargs---bash
+        |         |              `-2*[bash]
+        |         |-bash-+-sort---bash-+-sort
+        |         |      |             `-xargs
+        |         |      `-xargs-+-bash---bash
+        |         |              `-bash
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash
+        |         |              `-3*[bash---bash]
+        |         |-bash-+-sort
+        |         |      `-xargs-+-bash-+-sort
+        |         |              |      `-xargs-+-bash-+-sort
+        |         |              |              |      `-xargs
+        |         |              |              `-2*[bash]
+        |         |              `-bash-+-sort
+        |         |                     `-xargs---bash-+-sort
+        |         |                                    `-xargs-+-3*[bash]
+        |         |                                            `-bash-+-sort
+        |         |                                                   `-xargs---bash
+        |         |-bash-+-sort
+        |         |      `-xargs---bash-+-sort
+        |         |                     `-xargs---bash-+-sort
+        |         |                                    `-xargs---bash-+-sort
+        |         |                                                   `-xargs-+-2*[bash]
+        |         |                                                           `-bash---sort
+        |         |-bash-+-sort---bash
+        |         |      `-xargs---2*[bash]
+        |         |-dbus-daemon
+        |         |-dconf-service---2*[{dconf-service}]
+        |         |-2*[find]
+        |         |-gnome-terminal--+-7*[bash]
+        |         |                 |-bash---pstree
+        |         |                 |-bash---top
+        |         |                 `-3*[{gnome-terminal-}]
+        |         |-gvfsd---2*[{gvfsd}]
+        |         |-gvfsd-fuse---5*[{gvfsd-fuse}]
+        |         |-notify-osd---3*[{notify-osd}]
+        |         |-scp-dbus-servic---3*[{scp-dbus-servic}]
+        |         |-sort
+        |         `-ssh-agent
+        |-systemd-journal
+        |-systemd-logind
+        |-systemd-network
+        |-systemd-resolve
+        |-systemd-timesyn
+        |-systemd-udevd
+        |-thermald---{thermald}
+        |-udisksd---4*[{udisksd}]
+        |-whoopsie---2*[{whoopsie}]
+        |-wpa_supplicant
+        |-xautolock
+        `-xinetd
