@@ -33,6 +33,9 @@ cmd="exiftool  \
     $tempname"
 $cmd
 
+# force orientation to horizontal; some frames are sideways but this messes up output consistency
+exiftool -Orientation#=1 $tempname
+
 # now seek back in syslog and find sensor data...
 most_recent_tx=$(fgrep "GNGGA,$timestamp_search" syslog -B 50 | fgrep "TX: \$\$SAM" | fgrep -v NOFIX | tail -n 1 | cut -d\  -f7-)
 sentence_id=$(echo $most_recent_tx | cut -d, -f2)
