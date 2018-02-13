@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+fps=20
+
+target=output-combined
+
+frames="frames-$target.txt"
+
+echo "output-combined/IMG_6464.JPG" > $frames # HACK so the first frame is the right res
+find $target/ -iname "*.JPG"  | sort >> $frames
+
+mkdir -p output
+
+mencoder -nosound -ovc lavc -lavcopts \
+    vcodec=mpeg4:mbd=2:trell:autoaspect:vqscale=3 \
+    $vf -mf type=jpeg:fps=$fps \
+    mf://@$frames -o output/time-lapse-$target-`strdate`.avi
+
+#rm $frames
