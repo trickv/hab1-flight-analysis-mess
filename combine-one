@@ -61,6 +61,11 @@ Aperture F=%[exif:FNumber]"
 # do the work
 # note the identify subprocess inline...
 
-convert $tempname -pointsize 100 -fill black -gravity southeast -annotate +0+0 "`identify -format \"$format\" $tempname`" $most_recent_rpi_photo -adjoin -smush 0x0 output-combined/$filename
+convert $tempname \
+    -pointsize 100 -fill black -gravity southwest \
+    $most_recent_rpi_photo -adjoin -smush 0x0 \
+    -gravity southeast \
+    -annotate +0+0 "`identify -format \"$format\" \$tempname`" \
+    output-combined/$filename
 
 rm $tempname*
