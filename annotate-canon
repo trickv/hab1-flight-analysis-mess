@@ -5,7 +5,7 @@ set -u
 
 cd `dirname $(realpath $0)`
 
-rm -rf output
-mkdir output
+rm -rf output-canon
+mkdir output-canon
 
-find ../106___12/*JPG | sort | xargs -P 6 -n 1 ./annotate-one
+find ../106___12/*JPG | sort | xargs -P 6 -n 1 ./annotate-one-canon
