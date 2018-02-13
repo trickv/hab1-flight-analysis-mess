@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+set -u
+
+cd `dirname $(realpath $0)`
+
+rm -rf output-combined
+mkdir output-combined
+
+find ../106___12/*JPG | sort | xargs -P 6 -n 1 ./combine-one
