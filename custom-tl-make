@@ -1,15 +1,19 @@
 #!/usr/bin/env bash
 
-fps=20
+fps=5
 
 target=output-combined
 
 frames="frames-$target.txt"
 
-echo "output-combined/IMG_6464.JPG" > $frames # HACK so the first frame is the right res
+rm $frames
+#echo "output-combined/IMG_6464.JPG" > $frames # HACK so the first frame is the right res
 find $target/ -iname "*.JPG"  | sort >> $frames
 
 mkdir -p output
+
+#vf="-vf scale=2304:2960"
+vf="-vf scale=3072:3935" # its actually 3072x3934.666667
 
 mencoder -nosound -ovc lavc -lavcopts \
     vcodec=mpeg4:mbd=2:trell:autoaspect:vqscale=3 \
