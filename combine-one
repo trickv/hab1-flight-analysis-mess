@@ -91,7 +91,7 @@ echo "Pi photo: $most_recent_rpi_photo"
 
 # format string to pass to identify
 format="
-Canon camera:  
+Canon camera:
 Exposure Time=%[exif:ExposureTime]
 ISO=%[exif:ISOSpeedRatings]
 Aperture F=%[exif:FNumber]
@@ -108,7 +108,7 @@ convert $tempname \
     $most_recent_rpi_photo +smush 0x0 \
     -gravity southeast \
     -pointsize 100 -fill black -stroke white \
-    -annotate +0+0 "`identify -format \"$format\" \$tempname`" \
+    -annotate +20+0 "`identify -format \"$format\" \$tempname`" \
     output-combined/$filename
 
 rm $tempname*
