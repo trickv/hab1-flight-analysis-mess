@@ -65,15 +65,19 @@ echo "Pi photo: $most_recent_rpi_photo"
 
 # format string to pass to identify
 format="
+Canon camera:  
+Exposure Time=%[exif:ExposureTime]
+ISO=%[exif:ISOSpeedRatings]
+Aperture F=%[exif:FNumber]
+
+Tracker:  
 Altitude=$GPSAltitude
 $GPSLatitude $GPSLatitudeRef, $GPSLongitude $GPSLongitudeRef
 TX id: $sentence_id
 External: $external_temperature°C, ${pressure}mb, $humidity%%RH
 Internal: $internal_temperature°C
 %[EXIF:DateTime]
-Exposure Time=%[exif:ExposureTime]
-ISO=%[exif:ISOSpeedRatings]
-Aperture F=%[exif:FNumber]"
+"
 
 # do the work
 # note the identify subprocess inline...
