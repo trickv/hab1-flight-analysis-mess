@@ -1,0 +1,4 @@
+time combine-all (6 threads) takes:
+real	20m40.188s
+user	73m5.171s
+sys	9m6.288s
