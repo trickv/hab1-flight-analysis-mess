@@ -83,9 +83,10 @@ Internal: $internal_temperature°C
 # note the identify subprocess inline...
 
 convert $tempname \
-    -pointsize 100 -fill black -gravity southwest \
-    $most_recent_rpi_photo -adjoin -smush 0x0 \
+    -gravity northeast \
+    $most_recent_rpi_photo +smush 0x0 \
     -gravity southeast \
+    -pointsize 100 -fill black -stroke white \
     -annotate +0+0 "`identify -format \"$format\" \$tempname`" \
     output-combined/$filename
 
