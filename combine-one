@@ -107,7 +107,7 @@ convert $tempname \
     -gravity northeast \
     $most_recent_rpi_photo +smush 0x0 \
     -gravity southeast \
-    -pointsize 100 -fill black -stroke white \
+    -pointsize 100 -fill black -stroke white -strokewidth 2 \
     -annotate +20+0 "`identify -format \"$format\" \$tempname`" \
     output-combined/$filename
 
