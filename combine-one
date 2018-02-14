@@ -63,7 +63,7 @@ format="
 Altitude=$GPSAltitude
 $GPSLatitude $GPSLatitudeRef, $GPSLongitude $GPSLongitudeRef
 TX id: $sentence_id
-External: $external_temperature°C, ${pressure}mB, $humidity%%RH
+External: $external_temperature°C, ${pressure}mb, $humidity%%RH
 Internal: $internal_temperature°C
 %[EXIF:DateTime]
 Exposure Time=%[exif:ExposureTime]
