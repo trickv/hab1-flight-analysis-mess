@@ -15,7 +15,8 @@ export TMPDIR=/dev/shm/
 exiftool -AllDates+='0:0:5093976' $tempname
 
 # get current time
-timestamp_search=$(identify -format "%[EXIF:DateTime]" $tempname | awk '{print $2}' | sed s/://g)
+timestamp_search_colons=$(identify -format "%[EXIF:DateTime]" $tempname | awk '{print $2}')
+timestamp_search=$(echo $timestamp_search_colons | sed s/://g)
 
 # find matching gps sentence
 fgrep "GNGGA,$timestamp_search" gps-log
@@ -39,19 +40,42 @@ $cmd
 # force orientation to horizontal; some frames are sideways but this messes up output consistency
 exiftool -Orientation#=1 $tempname
 
+tracker_output_string=""
 # now seek back in syslog and find sensor data...
 most_recent_tx=$(fgrep "GNGGA,$timestamp_search" syslog -B 50 | fgrep "TX: \$\$SAM" | fgrep -v NOFIX | tail -n 1 | cut -d\  -f7-)
-sentence_id=$(echo $most_recent_tx | cut -d, -f2)
-external_temperature=$(echo $most_recent_tx | cut -d, -f8)
-pressure=$(echo $most_recent_tx | cut -d, -f9)
-humidity=$(echo $most_recent_tx | cut -d, -f10)
-internal_temperature=$(echo $most_recent_tx | cut -d, -f11 | cut -d\* -f1) # FIXME wrapping
-if [ "$internal_temperature" != "" ]; then
-    if [ ${internal_temperature%%.*} -gt 128 ]; then
-        new_internal_temperature=$(echo $internal_temperature-256 | bc)
-        echo "Internal temp ($internal_temperature) over 128, recalc=$new_internal_temperature"
-        internal_temperature=$new_internal_temperature
+if [ "$most_recent_tx" != "" ]; then
+    sentence_id=$(echo $most_recent_tx | cut -d, -f2)
+    external_temperature=$(echo $most_recent_tx | cut -d, -f8)
+    pressure=$(echo $most_recent_tx | cut -d, -f9)
+    humidity=$(echo $most_recent_tx | cut -d, -f10)
+    internal_temperature=$(echo $most_recent_tx | cut -d, -f11 | cut -d\* -f1) # FIXME wrapping
+    if [ "$internal_temperature" != "" ]; then
+        if [ ${internal_temperature%%.*} -gt 128 ]; then
+            new_internal_temperature=$(echo $internal_temperature-256 | bc)
+            echo "Internal temp ($internal_temperature) over 128, recalc=$new_internal_temperature"
+            internal_temperature=$nnew_internal_temperatureew_internal_temperature
+        fi
     fi
+    tracker_output_string="SAM (sdcard)
+Altitude=$GPSAltitude
+$GPSLatitude $GPSLatitudeRef, $GPSLongitude $GPSLongitudeRef
+TX id: $sentence_id
+External: $external_temperature°C, ${pressure}mb, $humidity%%RH
+Internal: $internal_temperature°C
+"
+
+else
+    # if there is no matching telemetry string on-board, look it up from BUZZ:
+    buzz_sentence_id=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json  | jq ".[] | select(.time <= \"$timestamp_search_colons\") | .sentence_id"  | tail -n 1)
+    echo "BUZZ sentence_id: $buzz_sentence_id"
+    latitude=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json | jq '.[] | select(.sentence_id == 2100) | .latitude')
+    longitude=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json | jq '.[] | select(.sentence_id == 2100) | .latitude')
+    altitude=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json | jq '.[] | select(.sentence_id == 2100) | .altitude')
+    tracker_output_string="BUZZ
+Altitude=$altitude
+$latitude, $longitude
+TX id: $buzz_sentence_id
+"
 fi
 
 # and then seek back in syslog to find relevant rpi photo
@@ -72,12 +96,7 @@ Exposure Time=%[exif:ExposureTime]
 ISO=%[exif:ISOSpeedRatings]
 Aperture F=%[exif:FNumber]
 
-Tracker:  
-Altitude=$GPSAltitude
-$GPSLatitude $GPSLatitudeRef, $GPSLongitude $GPSLongitudeRef
-TX id: $sentence_id
-External: $external_temperature°C, ${pressure}mb, $humidity%%RH
-Internal: $internal_temperature°C
+Tracker: $tracker_output_string
 %[EXIF:DateTime]
 "
 
