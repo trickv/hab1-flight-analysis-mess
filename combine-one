@@ -46,6 +46,11 @@ external_temperature=$(echo $most_recent_tx | cut -d, -f8)
 pressure=$(echo $most_recent_tx | cut -d, -f9)
 humidity=$(echo $most_recent_tx | cut -d, -f10)
 internal_temperature=$(echo $most_recent_tx | cut -d, -f11 | cut -d\* -f1) # FIXME wrapping
+if [ ${internal_temperature%%.*} -gt 128 ]; then
+    new_internal_temperature=$(echo $internal_temperature-256 | bc)
+    echo "Internal temp ($internal_temperature) over 128, recalc=$new_internal_temperature"
+    internal_temperature=$new_internal_temperature
+fi
 
 # and then seek back in syslog to find relevant rpi photo
 most_recent_rpi_photo_id=$(fgrep "GNGGA,$timestamp_search" syslog -B 50 | fgrep "Camera: taking picture" | tail -n 1 | cut -d/ -f6)
