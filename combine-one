@@ -53,6 +53,9 @@ most_recent_rpi_photo="../SAM-tracker-sdcard/photos/3/$most_recent_rpi_photo_id"
 if [ "$most_recent_rpi_photo_id" == "" ]; then
     most_recent_rpi_photo="blank-rpi-frame.jpg"
 fi
+if [ ! -s "$most_recent_rpi_photo" ]; then
+    most_recent_rpi_photo="blank-rpi-frame.jpg"
+fi
 echo "Pi photo: $most_recent_rpi_photo"
 
 # format string to pass to identify
