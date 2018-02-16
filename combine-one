@@ -53,7 +53,7 @@ if [ "$most_recent_tx" != "" ]; then
         if [ ${internal_temperature%%.*} -gt 128 ]; then
             new_internal_temperature=$(echo $internal_temperature-256 | bc)
             echo "Internal temp ($internal_temperature) over 128, recalc=$new_internal_temperature"
-            internal_temperature=$nnew_internal_temperatureew_internal_temperature
+            internal_temperature=$new_internal_temperature
         fi
     fi
     tracker_output_string="SAM (sdcard)
