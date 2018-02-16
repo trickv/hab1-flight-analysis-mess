@@ -1,0 +1,17 @@
+An extremely slow, inflexible and inefficient, incredibly tailored to the exact data files for my HAB1 - SAM+BUZZ launch.
+
+It takes:
+* A directory of Canon point-and-shoot camera files and iterates over them.
+* Adjusts the time stamps
+* Finds the matching photo from the Raspberry Pi camera
+* Finds the matching telemetry data from SAM, or BUZZ if SAM was offline
+* Finds the matching sensor data from SAM as well
+
+It then shoves the two images next to each other and overlays some text of telemetry and sensor data on the image.
+
+It's terribly inefficient how it greps the telemetry log files, but it works as a PoC.
+
+Bugs in the tracker that it compensates for:
+* Canon A810 clock was out of sync by 56 days
+* Raspberry Pi was out of sync by ~1 day so we ignore timestamps from it, and instead rely on GPS times
+* The internal temperature sensor byte -> int conversion was wrong and the logs converted it as an unsigned int.
