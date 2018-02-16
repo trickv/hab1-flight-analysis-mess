@@ -91,11 +91,6 @@ echo "Pi photo: $most_recent_rpi_photo"
 
 # format string to pass to identify
 format="
-Canon camera:
-Exposure Time=%[exif:ExposureTime]
-ISO=%[exif:ISOSpeedRatings]
-Aperture F=%[exif:FNumber]
-
 Tracker: $tracker_output_string
 %[EXIF:DateTime]
 "
