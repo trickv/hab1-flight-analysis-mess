@@ -68,9 +68,9 @@ else
     # if there is no matching telemetry string on-board, look it up from BUZZ:
     buzz_sentence_id=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json  | jq ".[] | select(.time <= \"$timestamp_search_colons\") | .sentence_id"  | tail -n 1)
     echo "BUZZ sentence_id: $buzz_sentence_id"
-    latitude=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json | jq '.[] | select(.sentence_id == 2100) | .latitude')
-    longitude=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json | jq '.[] | select(.sentence_id == 2100) | .latitude')
-    altitude=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json | jq '.[] | select(.sentence_id == 2100) | .altitude')
+    latitude=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json | jq ".[] | select(.sentence_id == $buzz_sentence_id) | .latitude")
+    longitude=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json | jq ".[] | select(.sentence_id == $buzz_sentence_id) | .longitude")
+    altitude=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json | jq ".[] | select(.sentence_id == $buzz_sentence_id) | .altitude")
     tracker_output_string="BUZZ
 Altitude=$altitude
 $latitude, $longitude
