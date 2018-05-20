@@ -3,6 +3,10 @@
 # takes a Canon image as reference time, and then
 # looks up the rpi image from the logs
 
+set -u
+set -e
+trap 'echo "Error line $LINENO"' ERR
+
 filename=$(basename $1)
 
 tempname=/dev/shm/$filename
@@ -11,11 +15,12 @@ cp $1 $tempname
 # imagemagick uses /tmp as default TMPDIR, so tell it to use something else:
 export TMPDIR=/dev/shm/
 
-# adjust the time. add 5093976s
-exiftool -AllDates+='0:0:5093976' $tempname
+# adjust the time. add 22 seconds for clock sync based on IMG_7248
+exiftool -AllDates+='0:0:22' $tempname
 
 # get current time
 timestamp_search_colons=$(identify -format "%[EXIF:DateTime]" $tempname | awk '{print $2}')
+echo "Time: $timestamp_search_colons"
 timestamp_search=$(echo $timestamp_search_colons | sed s/://g)
 
 # find matching gps sentence
@@ -42,21 +47,14 @@ exiftool -Orientation#=1 $tempname
 
 tracker_output_string=""
 # now seek back in syslog and find sensor data...
-most_recent_tx=$(fgrep "GNGGA,$timestamp_search" syslog -B 50 | fgrep "TX: \$\$SAM" | fgrep -v NOFIX | tail -n 1 | cut -d\  -f7-)
+most_recent_tx=$(fgrep "GNGGA,$timestamp_search" syslog -B 50 | fgrep "TX: \$\$EAGLE" | fgrep -v NOFIX | tail -n 1 | cut -d\  -f7-)
 if [ "$most_recent_tx" != "" ]; then
     sentence_id=$(echo $most_recent_tx | cut -d, -f2)
     external_temperature=$(echo $most_recent_tx | cut -d, -f8)
     pressure=$(echo $most_recent_tx | cut -d, -f9)
     humidity=$(echo $most_recent_tx | cut -d, -f10)
-    internal_temperature=$(echo $most_recent_tx | cut -d, -f11 | cut -d\* -f1) # FIXME wrapping
-    if [ "$internal_temperature" != "" ]; then
-        if [ ${internal_temperature%%.*} -gt 128 ]; then
-            new_internal_temperature=$(echo $internal_temperature-256 | bc)
-            echo "Internal temp ($internal_temperature) over 128, recalc=$new_internal_temperature"
-            internal_temperature=$new_internal_temperature
-        fi
-    fi
-    tracker_output_string="SAM (sdcard)
+    internal_temperature=$(echo $most_recent_tx | cut -d, -f11 | cut -d\* -f1)
+    tracker_output_string="EAGLE (sdcard)
 Altitude=$GPSAltitude
 $GPSLatitude $GPSLatitudeRef, $GPSLongitude $GPSLongitudeRef
 TX id: $sentence_id
@@ -65,22 +63,15 @@ Internal: $internal_temperature°C
 "
 
 else
-    # if there is no matching telemetry string on-board, look it up from BUZZ:
-    buzz_sentence_id=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json  | jq ".[] | select(.time <= \"$timestamp_search_colons\") | .sentence_id"  | tail -n 1)
-    echo "BUZZ sentence_id: $buzz_sentence_id"
-    latitude=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json | jq ".[] | select(.sentence_id == $buzz_sentence_id) | .latitude")
-    longitude=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json | jq ".[] | select(.sentence_id == $buzz_sentence_id) | .longitude")
-    altitude=$(cat habitat-telemetry/HAB1-BUZZ-telemetry.json | jq ".[] | select(.sentence_id == $buzz_sentence_id) | .altitude")
-    tracker_output_string="BUZZ
-Altitude=$altitude
-$latitude, $longitude
-TX id: $buzz_sentence_id
+    # if there is no matching telemetry string on-board, just note error:
+    echo "No GPS data at $timestamp_search"
+    tracker_output_string="No Data
 "
 fi
 
 # and then seek back in syslog to find relevant rpi photo
-most_recent_rpi_photo_id=$(fgrep "GNGGA,$timestamp_search" syslog -B 50 | fgrep "Camera: taking picture" | tail -n 1 | cut -d/ -f6)
-most_recent_rpi_photo="../SAM-tracker-sdcard/photos/3/$most_recent_rpi_photo_id"
+most_recent_rpi_photo_id=$(fgrep "GNGGA,$timestamp_search" syslog -B 50 | fgrep "Camera: taking picture" | tail -n 1 | cut -d/ -f5-)
+most_recent_rpi_photo="../tracker-home-pi/pi/photos/$most_recent_rpi_photo_id"
 if [ "$most_recent_rpi_photo_id" == "" ]; then
     most_recent_rpi_photo="blank-rpi-frame.jpg"
 fi
@@ -88,6 +79,10 @@ if [ ! -s "$most_recent_rpi_photo" ]; then
     most_recent_rpi_photo="blank-rpi-frame.jpg"
 fi
 echo "Pi photo: $most_recent_rpi_photo"
+pi_rotated=$(mktemp /dev/shm/rpi-tmp.XXXXXX)
+cp -p $most_recent_rpi_photo $pi_rotated
+convert -rotate 180 $most_recent_rpi_photo $pi_rotated
+
 
 # format string to pass to identify
 format="
@@ -98,12 +93,15 @@ Tracker: $tracker_output_string
 # do the work
 # note the identify subprocess inline...
 
+mkdir -p output-combined
+
 convert $tempname \
     -gravity northeast \
-    $most_recent_rpi_photo +smush 0x0 \
+    $pi_rotated +smush 0x0 \
     -gravity southeast \
     -pointsize 100 -fill black -stroke white -strokewidth 2 \
     -annotate +20+0 "`identify -format \"$format\" \$tempname`" \
     output-combined/$filename
 
 rm $tempname*
+rm $pi_rotated

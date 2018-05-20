@@ -14,4 +14,4 @@ cd `dirname $(realpath $0)`
 rm -rf output-combined
 mkdir output-combined
 
-find ../106___12/*JPG | sort | xargs -P $threads -n 1 ./combine-one
+find ../Canon-A810/106___05/*JPG | sort | xargs -P $threads -n 1 ./combine-one
