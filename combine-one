@@ -24,23 +24,28 @@ echo "Time: $timestamp_search_colons"
 timestamp_search=$(echo $timestamp_search_colons | sed s/://g)
 
 # find matching gps sentence
+set +e
 fgrep "GNGGA,$timestamp_search" gps-log
-GPSLatitude=$(fgrep "GNGGA,$timestamp_search" gps-log | cut -d, -f3)
-GPSLatitudeRef=$(fgrep "GNGGA,$timestamp_search" gps-log | cut -d, -f4)
-GPSLongitude=$(fgrep "GNGGA,$timestamp_search" gps-log | cut -d, -f5)
-GPSLongitudeRef=$(fgrep "GNGGA,$timestamp_search" gps-log | cut -d, -f6)
-GPSAltitude=$(fgrep "GNGGA,$timestamp_search" gps-log | cut -d, -f10)
-GPSAltitudeRef=$(fgrep "GNGGA,$timestamp_search" gps-log | cut -d, -f11)
+ret=$?
+set -e
+if [ $ret -eq 0 ]; then
+    GPSLatitude=$(fgrep "GNGGA,$timestamp_search" gps-log | cut -d, -f3)
+    GPSLatitudeRef=$(fgrep "GNGGA,$timestamp_search" gps-log | cut -d, -f4)
+    GPSLongitude=$(fgrep "GNGGA,$timestamp_search" gps-log | cut -d, -f5)
+    GPSLongitudeRef=$(fgrep "GNGGA,$timestamp_search" gps-log | cut -d, -f6)
+    GPSAltitude=$(fgrep "GNGGA,$timestamp_search" gps-log | cut -d, -f10)
+    GPSAltitudeRef=$(fgrep "GNGGA,$timestamp_search" gps-log | cut -d, -f11)
 
-# put GPS data into tag
-cmd="exiftool  \
-    -GPSLatitude=$GPSLatitude \
-    -GPSLatitudeRef=$GPSLatitudeRef \
-    -GPSLongitude=$GPSLongitude \
-    -GPSLongitudeRef=$GPSLongitudeRef \
-    -GPSAltitude=$GPSAltitude \
-    $tempname"
-$cmd
+    # put GPS data into tag
+    cmd="exiftool  \
+        -GPSLatitude=$GPSLatitude \
+        -GPSLatitudeRef=$GPSLatitudeRef \
+        -GPSLongitude=$GPSLongitude \
+        -GPSLongitudeRef=$GPSLongitudeRef \
+        -GPSAltitude=$GPSAltitude \
+        $tempname"
+    $cmd
+fi
 
 # force orientation to horizontal; some frames are sideways but this messes up output consistency
 exiftool -Orientation#=1 $tempname
