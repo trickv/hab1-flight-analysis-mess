@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# takes a Canon image as reference time, and then
-# looks up the rpi image from the logs
-
 set -u
 set -e
 trap 'echo "Error line $LINENO"' ERR
@@ -16,7 +13,7 @@ cp $1 $tempname
 export TMPDIR=/dev/shm/
 
 # adjust the time. add 22 seconds for clock sync based on IMG_7248
-exiftool -AllDates+='0:0:22' $tempname
+### we should be in sync this launch! #exiftool -AllDates+='0:0:22' $tempname # TODO: shouldnt need this
 
 # get current time
 timestamp_search_colons=$(identify -format "%[EXIF:DateTime]" $tempname | awk '{print $2}')
@@ -48,7 +45,7 @@ if [ $ret -eq 0 ]; then
 fi
 
 # force orientation to horizontal; some frames are sideways but this messes up output consistency
-exiftool -Orientation#=1 $tempname
+#exiftool -Orientation#=1 $tempname # TODO: shouldn't need this
 
 tracker_output_string=""
 # now seek back in syslog and find sensor data...
@@ -59,13 +56,20 @@ if [ "$most_recent_tx" != "" ]; then
     pressure=$(echo $most_recent_tx | cut -d, -f9)
     humidity=$(echo $most_recent_tx | cut -d, -f10)
     internal_temperature=$(echo $most_recent_tx | cut -d, -f11 | cut -d\* -f1)
-    tracker_output_string="EAGLE (sdcard)
+    tracker_output_string="EAGLE
 Altitude=$GPSAltitude
-$GPSLatitude $GPSLatitudeRef, $GPSLongitude $GPSLongitudeRef
+$GPSLatitude $GPSLatitudeRef
+$GPSLongitude $GPSLongitudeRef
+
 TX id: $sentence_id
-External: $external_temperature°C, ${pressure}mb, $humidity%%RH
+External sensor:
+  $external_temperature°C, ${pressure}mb, $humidity%%RH
 Internal: $internal_temperature°C
 "
+
+if [ $sentence_id -lt 450 ]; then # XXX HACK
+    mogrify -rotate 180 $tempname
+fi
 
 else
     # if there is no matching telemetry string on-board, just note error:
@@ -73,20 +77,6 @@ else
     tracker_output_string="No Data
 "
 fi
-
-# and then seek back in syslog to find relevant rpi photo
-most_recent_rpi_photo_id=$(fgrep "GNGGA,$timestamp_search" syslog -B 50 | fgrep "Camera: taking picture" | tail -n 1 | cut -d/ -f5-)
-most_recent_rpi_photo="../tracker-home-pi/pi/photos/$most_recent_rpi_photo_id"
-if [ "$most_recent_rpi_photo_id" == "" ]; then
-    most_recent_rpi_photo="blank-rpi-frame.jpg"
-fi
-if [ ! -s "$most_recent_rpi_photo" ]; then
-    most_recent_rpi_photo="blank-rpi-frame.jpg"
-fi
-echo "Pi photo: $most_recent_rpi_photo"
-pi_rotated=$(mktemp /dev/shm/rpi-tmp.XXXXXX)
-cp -p $most_recent_rpi_photo $pi_rotated
-convert -rotate 180 $most_recent_rpi_photo $pi_rotated
 
 
 # format string to pass to identify
@@ -101,12 +91,11 @@ Tracker: $tracker_output_string
 mkdir -p output-combined
 
 convert $tempname \
-    -gravity northeast \
-    $pi_rotated +smush 0x0 \
+    -gravity southwest \
+    -extent 3980x2464 \
     -gravity southeast \
-    -pointsize 100 -fill black -stroke white -strokewidth 2 \
+    -pointsize 50 -fill black -stroke white -strokewidth 2 \
     -annotate +20+0 "`identify -format \"$format\" \$tempname`" \
     output-combined/$filename
 
 rm $tempname*
-rm $pi_rotated
